@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
-import CheckBox from '@react-native-community/checkbox'; // Updated import
+import { View, Text, TextInput, Button, StyleSheet, ScrollView } from 'react-native';
+import CheckBox from 'expo-checkbox'; // Updated import for expo-checkbox
 
 export default function TotalFeesScreen() {
     const [selectedCourses, setSelectedCourses] = useState<number[]>([]);
     const [totalFees, setTotalFees] = useState(0);
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
 
     const courses = [
         { id: 1, name: 'First Aid', fee: 1500 },
@@ -17,28 +20,48 @@ export default function TotalFeesScreen() {
     ];
 
     const calculateFees = () => {
-        let subtotal = selectedCourses.reduce((acc, course) => acc + courses.find(c => c.id === course)!.fee, 0);
-        let discount = 0;
+        let subtotal = selectedCourses.reduce((acc, courseId) => {
+            const course = courses.find(c => c.id === courseId);
+            return acc + (course ? course.fee : 0);
+        }, 0);
 
+        let discount = 0;
         if (selectedCourses.length === 2) discount = 0.05;
         else if (selectedCourses.length === 3) discount = 0.10;
         else if (selectedCourses.length > 3) discount = 0.15;
 
-        subtotal = subtotal - subtotal * discount;
+        subtotal -= subtotal * discount;
         const vat = subtotal * 0.15;
         setTotalFees(subtotal + vat);
     };
 
     return (
-        <View>
-            <Text>Enter your contact details</Text>
-            <TextInput placeholder="Name" />
-            <TextInput placeholder="Phone" />
-            <TextInput placeholder="Email" />
+        <ScrollView contentContainerStyle={styles.container}>
+            <Text style={styles.header}>Enter Your Contact Details</Text>
+            <TextInput
+                style={styles.input}
+                placeholder="Name"
+                value={name}
+                onChangeText={setName}
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="Phone"
+                value={phone}
+                onChangeText={setPhone}
+                keyboardType="phone-pad"
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="Email"
+                value={email}
+                onChangeText={setEmail}
+                keyboardType="email-address"
+            />
 
-            <Text>Select Courses:</Text>
+            <Text style={styles.coursesHeader}>Select Courses:</Text>
             {courses.map((course) => (
-                <View key={course.id} style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <View key={course.id} style={styles.checkboxContainer}>
                     <CheckBox
                         value={selectedCourses.includes(course.id)}
                         onValueChange={() => {
@@ -49,12 +72,47 @@ export default function TotalFeesScreen() {
                             }
                         }}
                     />
-                    <Text>{course.name} - {course.fee}</Text>
+                    <Text>{course.name} - ${course.fee}</Text>
                 </View>
             ))}
 
             <Button title="Calculate Fees" onPress={calculateFees} />
-            <Text>Total Fees: {totalFees}</Text>
-        </View>
+            <Text style={styles.totalFees}>Total Fees: ${totalFees.toFixed(2)}</Text>
+        </ScrollView>
     );
 }
+
+// Styling for the component
+const styles = StyleSheet.create({
+    container: {
+        padding: 20,
+        backgroundColor: '#f5f5f5',
+    },
+    header: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginBottom: 15,
+    },
+    input: {
+        height: 40,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        borderRadius: 5,
+        paddingHorizontal: 10,
+        marginBottom: 15,
+    },
+    coursesHeader: {
+        fontSize: 18,
+        marginBottom: 10,
+    },
+    checkboxContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 10,
+    },
+    totalFees: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginTop: 15,
+    },
+});

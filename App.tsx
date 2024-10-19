@@ -10,6 +10,10 @@ import ContactDetailsScreen from './screens/ContactDetailsScreen';
 import FirstAidCourse from './screens/FirstAidCourse'; // Add your import path
 import SewingCourse from './screens/SewingCourse'; // Add your import path
 import LandscapingCourse from './screens/LandscapingCourse'; // Add your import path
+import LifeSkillsCourse from './screens/LifeSkillsCourse';
+import CookingCourse from './screens/CookingCourse';
+import ChildMindingCourse from './screens/ChildMindingCourse';
+import GardenMaintenanceCourse from './screens/GardenMaintenenceCourse';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,11 +25,15 @@ export default function App() {
         <Stack.Screen name="Six Month Courses" component={SixMonthCourseScreen} />
         <Stack.Screen name="Six Week Courses" component={SixWeekCourseScreen} />
         <Stack.Screen name="CourseDetails" component={CourseDetailsScreen} />
-        <Stack.Screen name="Total Fees" component={TotalFeesScreen} />
+        <Stack.Screen name="TotalFeesScreen" component={TotalFeesScreen} />
         <Stack.Screen name="ContactDetailsScreen" component={ContactDetailsScreen} />
         <Stack.Screen name="FirstAidCourse" component={FirstAidCourse} />
         <Stack.Screen name="SewingCourse" component={SewingCourse} />
         <Stack.Screen name="LandscapingCourse" component={LandscapingCourse} />
+        <Stack.Screen name="LifeSkillsCourse" component={LifeSkillsCourse} />
+        <Stack.Screen name="ChildMindingCourse" component={ChildMindingCourse} />
+        <Stack.Screen name="CookingCourse" component={CookingCourse} />
+        <Stack.Screen name="GardenMaintenanceCourse" component={GardenMaintenanceCourse} />
       </Stack.Navigator>
     </NavigationContainer>
   );
