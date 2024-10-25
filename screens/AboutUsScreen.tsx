@@ -3,7 +3,7 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack'; // Import this
 import { RootStackParamList } from '../types'; // Adjust the import to match your file path
 
-// Define the props type for this screen using NativeStackScreenProps
+
 type AboutUsScreenProps = NativeStackScreenProps<RootStackParamList, 'AboutUsScreen'>;
 
 const AboutUsScreen: React.FC<AboutUsScreenProps> = ({ navigation }) => {

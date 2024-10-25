@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, ScrollView, Image } from 'react-native';
 import CheckBox from 'expo-checkbox'; // Updated import for expo-checkbox
 
 export default function TotalFeesScreen() {
@@ -37,6 +37,7 @@ export default function TotalFeesScreen() {
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
+            <Image source={ require( '../_images/LOGO Empowering nations.png' )} style={styles.logo} />
             <Text style={styles.header}>Enter Your Contact Details</Text>
             <TextInput
                 style={styles.input}
@@ -82,11 +83,17 @@ export default function TotalFeesScreen() {
     );
 }
 
-// Styling for the component
+
 const styles = StyleSheet.create({
     container: {
         padding: 20,
         backgroundColor: '#f5f5f5',
+    },
+    logo: { 
+        width: 150, 
+        height: 150, 
+        marginBottom: 200,
+        borderRadius: 75,
     },
     header: {
         fontSize: 20,

@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-nati
 import { RootStackParamList } from '../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-// Define the props type for this screen using NativeStackScreenProps
+
 type CookingCourseProps = NativeStackScreenProps<RootStackParamList, 'CookingCourse'>;
 
 const CookingCourse: React.FC<CookingCourseProps> = ({ navigation }) => {return (

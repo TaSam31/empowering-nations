@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { NavigationProp } from '@react-navigation/native';
-import { RootStackParamList } from '../types'; // Import your types
+import { RootStackParamList } from '../types'; 
 
 type ErrorHandlingScreenNavigationProp = NavigationProp<
   RootStackParamList,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Button, Image, StyleSheet } from 'react-native';
 import { NavigationProp } from '@react-navigation/native';
-import { RootStackParamList } from '../types'; // Adjust the path as necessary
+import { RootStackParamList } from '../types'; 
 
 type HomeScreenNavigationProp = NavigationProp<RootStackParamList, 'Home'>;
 
@@ -12,8 +12,7 @@ type Props = {
 export default function HomeScreen({ navigation }: Props) {
     return (
         <View style={styles.container}>
-            {/* Add your logo here */}
-            <Image source={{ uri: 'logo-url' }} style={styles.logo} />
+            <Image source={ require( '../_images/LOGO Empowering nations.png' )} style={styles.logo} />
             <Text style={styles.title}>Empowering the Nation</Text>
             <Text style={styles.description}>
                 Empowering the Nation is an initiative started by Precious Radebe in 2018 to
@@ -31,22 +30,29 @@ export default function HomeScreen({ navigation }: Props) {
                     onPress={() => navigation.navigate('Six Week Courses')}
                 />
             </View>
-        </View>
-    );
-}
+            <View style={styles.buttonSpacer} />
+                <Button
+                    title=" Course Deatils"
+                    onPress={() => navigation.navigate('CourseDetails', { courseId: 1 })}
+
+                />
+            </View> );}
+            
+
 
 const styles = StyleSheet.create({
     container: {
         flexGrow: 1,
         padding: 16,
-        backgroundColor: '#f0f4f8',
+        backgroundColor: '#89CFF0',
         justifyContent: 'center',
         alignItems: 'center',
     },
     logo: { 
-        width: 100, 
-        height: 100, 
-        marginBottom: 20 
+        width: 150, 
+        height: 150, 
+        marginBottom: 200,
+        borderRadius: 75,
     },
     title: { 
         fontSize: 24, 
@@ -64,6 +70,5 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     buttonSpacer: {
-        height: 15, // Adjust the spacing as needed
-    },
+        height: 15, },
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { RouteProp } from '@react-navigation/native';
-import { RootStackParamList } from '../types'; // Adjust the path as necessary
+import { RootStackParamList } from '../types';
 
 type CourseDetailsRouteProp = RouteProp<RootStackParamList, 'CourseDetails'>;
 
@@ -9,7 +9,7 @@ type Props = {
     route: CourseDetailsRouteProp;
 };
 
-// Define the structure for the course details
+
 type CourseDetail = {
     name: string;
     fee: string;
@@ -18,7 +18,7 @@ type CourseDetail = {
 };
 
 type CourseDetails = {
-    [key: number]: CourseDetail; // Allow numeric keys
+    [key: number]: CourseDetail; 
 };
 
 const courseDetails: CourseDetails = {
@@ -32,10 +32,10 @@ const courseDetails: CourseDetails = {
 };
 
 export default function CourseDetailsScreen({ route }: Props) {
-    // Ensure courseId is handled as string or number
+    
     const courseId = Number(route.params.courseId);
 
-    // Access course details using the numeric courseId
+    
     const course = courseDetails[courseId];
 
     if (!course) {

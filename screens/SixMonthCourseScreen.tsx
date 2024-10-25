@@ -3,7 +3,6 @@ import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-nati
 import { RootStackParamList } from '../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-// Define the props type for this screen using NativeStackScreenProps
 type SixMonthCoursesProps = NativeStackScreenProps<RootStackParamList, 'Six Month Courses'>;
 
 const SixMonthCourses: React.FC<SixMonthCoursesProps> = ({ navigation }) => {
@@ -14,43 +13,43 @@ const SixMonthCourses: React.FC<SixMonthCoursesProps> = ({ navigation }) => {
         Explore our comprehensive six-month courses designed to provide in-depth knowledge and skills.
       </Text>
 
-      {/* Course Buttons with Summaries */}
       <View style={styles.courseContainer}>
         <Text style={styles.courseSummary}>First Aid Course: Learn essential first aid techniques.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('FirstAidCourse')}>
-          <Text style={styles.buttonText}>First Aid</Text>
+          <Text style={styles.ButtonText}>First Aid</Text>
         </TouchableOpacity>
 
         <Text style={styles.courseSummary}>Sewing Course: Master the art of sewing and design.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('SewingCourse')}>
-          <Text style={styles.buttonText}>Sewing</Text>
+          <Text style={styles.ButtonText}>Sewing</Text>
         </TouchableOpacity>
 
         <Text style={styles.courseSummary}>Landscaping Course: Create beautiful outdoor spaces.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('LandscapingCourse')}>
-          <Text style={styles.buttonText}>Landscaping</Text>
+          <Text style={styles.ButtonText}>Landscaping</Text>
         </TouchableOpacity>
 
-        {/* New Life Skills Course */}
+       
         <Text style={styles.courseSummary}>Life Skills Course: Develop essential life skills for success.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('LifeSkillsCourse')}>
-          <Text style={styles.buttonText}>Life Skills</Text>
+          <Text style={styles.ButtonText}>Life Skills</Text>
         </TouchableOpacity>
       </View>
 
-      {/* Existing Buttons */}
-      <TouchableOpacity style={styles.calculateButton} onPress={() => { 
+      <View style={{ alignItems: 'center' }}>
+      <TouchableOpacity style={styles.NavigationButtons} onPress={() => { 
         alert('Fees Calculation Coming Soon!'); 
         navigation.navigate('TotalFeesScreen');
       }}>
-        <Text style={styles.calculateButtonText}>Calculate Fees</Text>
+        <Text style={styles.ButtonText}>Calculate Fees</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.calculateButton} onPress={() => navigation.navigate('ContactDetailsScreen')}>
-        <Text style={styles.calculateButtonText}>Contact Us</Text>
+      <TouchableOpacity style={styles.NavigationButtons} onPress={() => navigation.navigate('ContactDetailsScreen')}>
+        <Text style={styles.ButtonText}>Contact Us</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.calculateButton} onPress={() => navigation.goBack()}>
-        <Text style={styles.calculateButtonText}>Back</Text>
+      <TouchableOpacity style={styles.NavigationButtons} onPress={() => navigation.goBack()}>
+        <Text style={styles.ButtonText}>Back</Text>
       </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 };
@@ -68,15 +67,16 @@ const styles = StyleSheet.create({
     marginVertical: 10, 
     alignItems: 'center' 
   },
-  buttonText: { color: '#fff', fontSize: 16 },
-  calculateButton: { 
+ NavigationButtons: { 
     backgroundColor: '#007BFF', 
     padding: 10, 
-    borderRadius: 5, 
+    width: 200,
+    borderRadius: 15, 
     marginVertical: 5, 
-    alignItems: 'center' 
+    alignItems: 'center', 
+    
   },
-  calculateButtonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' }
+  ButtonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' }
 });
 
 export default SixMonthCourses;
