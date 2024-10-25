@@ -30,12 +30,7 @@ export default function HomeScreen({ navigation }: Props) {
                     onPress={() => navigation.navigate('Six Week Courses')}
                 />
             </View>
-            <View style={styles.buttonSpacer} />
-                <Button
-                    title=" Course Deatils"
-                    onPress={() => navigation.navigate('CourseDetails', { courseId: 2 })}
-
-                />
+    
             </View> );}
             
 
@@ -51,7 +46,7 @@ const styles = StyleSheet.create({
     logo: { 
         width: 150, 
         height: 150, 
-        marginBottom: 200,
+        marginBottom: 100,
         borderRadius: 75,
     },
     title: { 

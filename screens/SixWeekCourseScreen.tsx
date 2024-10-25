@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Image } from 'react-native';
 import { RootStackParamList } from '../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
@@ -16,20 +16,23 @@ const SixWeekCourses: React.FC<SixWeekCoursesProps> = ({ navigation }) => {
 
 
       <View style={styles.courseContainer}>
+        <View style={{alignItems:'center'}}>
+        <Image source={ require( '../_images/gardening.png' )} style={styles.courseImg}/>
         <Text style={styles.courseSummary}>Garden Maintenance: Learn how to maintain beautiful gardens.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('GardenMaintenanceCourse')}>
           <Text style={styles.buttonText}>Garden Maintenance</Text>
         </TouchableOpacity>
-
+        <Image source={ require( '../_images/childminding.png' )} style={styles.courseImg}/>
         <Text style={styles.courseSummary}>Childminding: Gain skills for taking care of children.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('ChildMindingCourse')}>
           <Text style={styles.buttonText}>Child Minding</Text>
         </TouchableOpacity>
-
+        <Image source={ require( '../_images/cooking.png' )} style={styles.courseImg}/>
         <Text style={styles.courseSummary}>Cooking: Master basic cooking techniques and recipes.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('CookingCourse')}>
           <Text style={styles.buttonText}>Cooking</Text>
         </TouchableOpacity>
+      </View>
       </View>
 
   
@@ -61,9 +64,10 @@ const styles = StyleSheet.create({
   courseButton: { 
     backgroundColor: '#28A745', 
     padding: 12, 
-    borderRadius: 5, 
+    borderRadius: 10, 
     marginVertical: 10, 
-    alignItems: 'center' 
+    alignItems: 'center',
+    width: 300, 
   },
   buttonText: { color: '#fff', fontSize: 16 },
   NavigationButtons: { 
@@ -74,7 +78,12 @@ const styles = StyleSheet.create({
     marginVertical: 5, 
     alignItems: 'center' 
   },
+  courseImg: {
+    height: 50,
+    width: 50,
+    borderRadius: 10
+  },
   ButtonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' }
 });
-
++
 export default SixWeekCourses;

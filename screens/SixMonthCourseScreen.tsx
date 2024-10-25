@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Image } from 'react-native';
 import { RootStackParamList } from '../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
@@ -14,26 +14,28 @@ const SixMonthCourses: React.FC<SixMonthCoursesProps> = ({ navigation }) => {
       </Text>
 
       <View style={styles.courseContainer}>
+      <View style={{ alignItems: 'center' }}>
+      <Image source={ require( '../_images/first-aid.jpg.jpg' )} style={styles.courseImg} />
         <Text style={styles.courseSummary}>First Aid Course: Learn essential first aid techniques.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('FirstAidCourse')}>
           <Text style={styles.ButtonText}>First Aid</Text>
         </TouchableOpacity>
-
+        <Image source={ require( '../_images/sewing pic.jpg' )} style={styles.courseImg}/>
         <Text style={styles.courseSummary}>Sewing Course: Master the art of sewing and design.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('SewingCourse')}>
           <Text style={styles.ButtonText}>Sewing</Text>
         </TouchableOpacity>
-
+        <Image source={ require( '../_images/Landcaping image.jpg' )} style={styles.courseImg}/>
         <Text style={styles.courseSummary}>Landscaping Course: Create beautiful outdoor spaces.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('LandscapingCourse')}>
           <Text style={styles.ButtonText}>Landscaping</Text>
         </TouchableOpacity>
-
-       
+        <Image source={ require( '../_images/life skills2.jpg' )} style={styles.courseImg}/>
         <Text style={styles.courseSummary}>Life Skills Course: Develop essential life skills for success.</Text>
         <TouchableOpacity style={styles.courseButton} onPress={() => navigation.navigate('LifeSkillsCourse')}>
           <Text style={styles.ButtonText}>Life Skills</Text>
         </TouchableOpacity>
+      </View>
       </View>
 
       <View style={{ alignItems: 'center' }}>
@@ -63,9 +65,15 @@ const styles = StyleSheet.create({
   courseButton: { 
     backgroundColor: '#28A745', 
     padding: 12, 
-    borderRadius: 5, 
+    borderRadius: 10, 
     marginVertical: 10, 
-    alignItems: 'center' 
+    alignItems: 'center',
+    width: 300,
+  },
+  courseImg: {
+height: 50,
+width: 50,
+borderRadius: 10,
   },
  NavigationButtons: { 
     backgroundColor: '#007BFF', 
