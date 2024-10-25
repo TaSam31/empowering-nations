@@ -13,6 +13,16 @@ const FirstAidCourse: React.FC<FirstAidCourseProps> = ({ navigation }) => {retur
       <View style={styles.imagePlaceholder}>
         <Image source={ require( '../_images/First-Aid-kit.jpg' )} style={styles.courseImg}/>
         </View>
+
+        <Text style={styles.content}>
+  Content:
+  {"\n"}• Wounds and bleeding
+  {"\n"}• Burns and fractures
+  {"\n"}• Emergency scene management
+  {"\n"}• Cardio-Pulmonary Resuscitation (CPR)
+  {"\n"}• Respiratory distress e.g., Choking, blocked airway
+</Text>
+
       <TouchableOpacity style={styles.button} onPress={() => alert('Fees Calculation Coming Soon!')}>
         <Text style={styles.buttonText}>Calculate Fees</Text>
       </TouchableOpacity>
@@ -55,6 +65,11 @@ const FirstAidCourse: React.FC<FirstAidCourseProps> = ({ navigation }) => {retur
       height: 200,
       width: 300,
     justifyContent: 'center',
+    },
+    content: {
+    fontSize: 16, 
+    marginBottom: 20, 
+    color: '#666' 
     },
   
   });

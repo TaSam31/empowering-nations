@@ -17,6 +17,17 @@ const LandscapingCourse: React.FC<LandscapingCourseProps> = ({ navigation }) => 
         <View style={styles.imagePlaceholder}>
         <Image source={ require( '../_images/Landcaping image.jpg' )} style={styles.courseImg}/>
         </View>
+
+        <Text style={styles.content}>
+  Content:
+  {"\n"}• Indigenous and exotic plants and trees
+  {"\n"}• Fixed structures (fountains, statues, benches, tables, built-in braai)
+  {"\n"}• Balancing of plants and trees in a garden
+  {"\n"}• Aesthetics of plant shapes and colors
+  {"\n"}• Garden layout
+</Text>
+
+
         <TouchableOpacity style={styles.button} onPress={() => alert('Fees Calculation Coming Soon!')}>
           <Text style={styles.buttonText}>Calculate Fees</Text>
         </TouchableOpacity>
@@ -59,6 +70,11 @@ const LandscapingCourse: React.FC<LandscapingCourseProps> = ({ navigation }) => 
         height: 200,
         width: 300,
       justifyContent: 'center',
+      },
+      content: {
+        fontSize: 16,
+        lineHeight: 24,
+        color: '#333',
       },
     });
   

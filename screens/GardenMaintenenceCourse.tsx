@@ -14,6 +14,13 @@ const GardenMaintenanceCourse: React.FC<GardenMaintenenceCourseProps> = ({ navig
         <View style={styles.imagePlaceholder}>
           <Image source={ require( '../_images/gardening.png' )} style={styles.courseImg}/>
         </View>
+        <Text style={styles.content}>
+  Content:
+  {"\n"}• Water restrictions and the watering requirements of indigenous and exotic plants
+  {"\n"}• Pruning and propagation of plants
+  {"\n"}• Planting techniques for different plant types
+</Text>
+
         <TouchableOpacity style={styles.button} onPress={() => alert('Fees Calculation Coming Soon!')}>
           <Text style={styles.buttonText}>Calculate Fees</Text>
         </TouchableOpacity>
@@ -56,6 +63,11 @@ const GardenMaintenanceCourse: React.FC<GardenMaintenenceCourseProps> = ({ navig
         height: 200,
         width: 300,
       justifyContent: 'center',
+      },
+      content: {
+        fontSize: 16,
+        lineHeight: 24,
+        color: '#333',
       },
   });
   

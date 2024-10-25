@@ -16,6 +16,17 @@ const SewingCourse: React.FC<SewingCourseProps> = ({ navigation }) => {
       <View style={styles.imagePlaceholder}>
       <Image source={ require( '../_images/sewing pic.jpg' )} style={styles.courseImg}/>
       </View>
+
+      <Text style={styles.content}>
+  Content:
+  {"\n"}• Types of stitches
+  {"\n"}• Threading a sewing machine
+  {"\n"}• Sewing buttons, zips, hems, and seams
+  {"\n"}• Alterations
+  {"\n"}• Designing and sewing new garments
+
+</Text>
+
       <TouchableOpacity style={styles.button} onPress={() => alert('Fees Calculation Coming Soon!')}>
         <Text style={styles.buttonText}>Calculate Fees</Text>
       </TouchableOpacity>
@@ -58,6 +69,11 @@ const styles = StyleSheet.create({
       height: 200,
       width: 300,
     justifyContent: 'center',
+    },
+    content: {
+      fontSize: 16,
+      lineHeight: 24,
+      color: '#333',
     },
   });
 

@@ -16,6 +16,14 @@ const LifeSkillsCourse: React.FC<LifeSkillsProps> = ({ navigation }) => {
       <View style={styles.imagePlaceholder}>
       <Image source={ require( '../_images/life skills2.jpg' )} style={styles.courseImg}/>
       </View>
+
+      <Text style={styles.content}>
+        {"\n"}• Opening a bank account
+        {"\n"}• Basic labour law (know your rights)
+        {"\n"}• Basic reading and writing literacy
+        {"\n"}• Basic numeric literacy
+      </Text>
+
       <TouchableOpacity style={styles.button} onPress={() => { 
         alert('Fees Calculation Coming Soon!'); 
         navigation.navigate('TotalFeesScreen'); // Navigate to TotalFeesScreen
@@ -61,6 +69,11 @@ const styles = StyleSheet.create({
       height: 200,
       width: 300,
     justifyContent: 'center',
+    },
+    content: {
+      fontSize: 16,
+      lineHeight: 24,
+      color: '#333',
     },
   });
 

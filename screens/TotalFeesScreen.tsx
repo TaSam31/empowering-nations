@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, ScrollView, Image } from 'react-native';
-import CheckBox from 'expo-checkbox'; // Updated import for expo-checkbox
+import CheckBox from 'expo-checkbox';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../types';
 
-export default function TotalFeesScreen() {
+type TotalFeesScreenProps = NativeStackScreenProps<RootStackParamList, 'TotalFeesScreen'>;
+
+const TotalFeesScreen: React.FC<TotalFeesScreenProps> = ({ navigation }) => {
     const [selectedCourses, setSelectedCourses] = useState<number[]>([]);
     const [totalFees, setTotalFees] = useState(0);
     const [name, setName] = useState('');
@@ -37,7 +41,9 @@ export default function TotalFeesScreen() {
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
-            <Image source={ require( '../_images/LOGO Empowering nations.png' )} style={styles.logo} />
+            <View style={{ alignItems: 'center' }}>
+                <Image source={require('../_images/LOGO Empowering nations.png')} style={styles.logo} />
+            </View>
             <Text style={styles.header}>Enter Your Contact Details</Text>
             <TextInput
                 style={styles.input}
@@ -73,16 +79,20 @@ export default function TotalFeesScreen() {
                             }
                         }}
                     />
-                    <Text>{course.name} - ${course.fee}</Text>
+                    <Text>{course.name} - R{course.fee}</Text>
                 </View>
             ))}
-
+            <View style={styles.buttonSpacer}>
             <Button title="Calculate Fees" onPress={calculateFees} />
-            <Text style={styles.totalFees}>Total Fees: ${totalFees.toFixed(2)}</Text>
+            </View>
+            <Button title="Back" onPress={() => navigation.goBack()} />
+            <Text style={styles.totalFees}>Total Fees: R{totalFees.toFixed(2)}</Text>
+
+            
+           
         </ScrollView>
     );
-}
-
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -92,7 +102,7 @@ const styles = StyleSheet.create({
     logo: { 
         width: 150, 
         height: 150, 
-        marginBottom: 20,
+        marginBottom: 50,
         borderRadius: 75,
     },
     header: {
@@ -122,4 +132,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 15,
     },
+    buttonSpacer: {
+    marginTop: 20,
+    marginBottom: 20, 
+    },
 });
+
+export default TotalFeesScreen;

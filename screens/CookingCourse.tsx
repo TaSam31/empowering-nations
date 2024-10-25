@@ -15,6 +15,14 @@ const CookingCourse: React.FC<CookingCourseProps> = ({ navigation }) => {return 
         <View style={styles.imagePlaceholder}>
         <Image source={ require( '../_images/cooking.png' )} style={styles.courseImg}/>
         </View>
+        <Text style={styles.content}>
+  Content:
+  {"\n"}• Nutritional requirements for a healthy body
+  {"\n"}• Types of protein, carbohydrates, and vegetables
+  {"\n"}• Planning meals
+  {"\n"}• Preparation and cooking of meals
+
+</Text>
         <TouchableOpacity style={styles.button} onPress={() => alert('Fees Calculation Coming Soon!')}>
           <Text style={styles.buttonText}>Calculate Fees</Text>
         </TouchableOpacity>
@@ -57,6 +65,11 @@ const CookingCourse: React.FC<CookingCourseProps> = ({ navigation }) => {return 
         height: 200,
         width: 300,
       justifyContent: 'center',
+      },
+      content: {
+        fontSize: 16,
+        lineHeight: 24,
+        color: '#333',
       },
     });
   

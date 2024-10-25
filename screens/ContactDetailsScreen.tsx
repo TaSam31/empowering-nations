@@ -69,9 +69,9 @@ const ContactDetailsScreen: React.FC<ContactDetailsScreenProps> = ({ navigation 
       />
 
       <Text style={styles.sectionTitle}>Company Contact Details</Text>
-      <Text>Phone: +1 (555) 123-4567</Text>
-      <Text>Email: info@company.com</Text>
-      <Text>Address: 1234 Street Name, City, Country</Text>
+      <Text>Phone: +27 (064) 380-0258</Text>
+      <Text>Email: empoweringnation@gmail.com</Text>
+      <Text>Address: 34 Goulins, Cape Town, South Africa</Text>
 
       <View style={styles.buttonContainer}>
         <Button title="Submit" onPress={handleSubmit} />
