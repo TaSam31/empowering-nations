@@ -33,7 +33,7 @@ export default function HomeScreen({ navigation }: Props) {
             <View style={styles.buttonSpacer} />
                 <Button
                     title=" Course Deatils"
-                    onPress={() => navigation.navigate('CourseDetails', { courseId: 1 })}
+                    onPress={() => navigation.navigate('CourseDetails', { courseId: 2 })}
 
                 />
             </View> );}

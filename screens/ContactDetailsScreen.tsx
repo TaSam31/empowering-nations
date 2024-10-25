@@ -1,43 +1,95 @@
-import React from 'react';
-import { View, Text, Button, StyleSheet, TextInput, Image } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Button, StyleSheet, TextInput, Image, ScrollView, Alert } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../types'; // Adjust the import path to match your setup
-
+import { RootStackParamList } from '../types';
 
 type ContactDetailsScreenProps = NativeStackScreenProps<RootStackParamList, 'ContactDetailsScreen'>;
 
 const ContactDetailsScreen: React.FC<ContactDetailsScreenProps> = ({ navigation }) => {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+
+  const validateInputs = () => {
+    if (!name) {
+      Alert.alert('Error', 'Please enter your name');
+      return false;
+    }
+    if (!phone) {
+      Alert.alert('Error', 'Please enter your phone number');
+      return false;
+    }
+      if (!/^[0-9]{10}$/.test(phone) || !phone.startsWith('0')) {
+        Alert.alert('Error', 'Please enter a valid 10-digit South African phone number starting with 0');
+        return false
+    }
+    if (!email) {
+      Alert.alert('Error', 'Please enter your email address');
+      return false;
+    }
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      Alert.alert('Error', 'Please enter a valid email address');
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = () => {
+    if (validateInputs()) {
+      Alert.alert('Success', 'Details submitted');
+    }
+  };
+
   return (
-    <View style={styles.container}>
-     <View style={{ alignItems: 'center' }}>
-      <Image source={ require( '../_images/LOGO Empowering nations.png' )} style={styles.logo} />
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.logoContainer}>
+        <Image source={require('../_images/LOGO Empowering nations.png')} style={styles.logo} />
       </View>
       <Text style={styles.title}>Contact Us</Text>
 
-      <TextInput style={styles.input} placeholder="Your Name" />
-      <TextInput style={styles.input} placeholder="Phone Number" keyboardType="phone-pad" />
-      <TextInput style={styles.input} placeholder="Email Address" keyboardType="email-address" />
-      
+      <TextInput 
+        style={styles.input} 
+        placeholder="Your Name" 
+        value={name} 
+        onChangeText={setName} 
+      />
+      <TextInput 
+        style={styles.input} 
+        placeholder="Phone Number" 
+        keyboardType="phone-pad" 
+        value={phone} 
+        onChangeText={setPhone} 
+      />
+      <TextInput 
+        style={styles.input} 
+        placeholder="Email Address" 
+        keyboardType="email-address" 
+        value={email} 
+        onChangeText={setEmail} 
+      />
+
       <Text style={styles.sectionTitle}>Company Contact Details</Text>
       <Text>Phone: +1 (555) 123-4567</Text>
       <Text>Email: info@company.com</Text>
       <Text>Address: 1234 Street Name, City, Country</Text>
 
-      <Button title="Submit" onPress={() => alert('Details submitted')} />
-      <Button title="Go Back" onPress={() => navigation.goBack()} />
-    </View>
+      <View style={styles.buttonContainer}>
+        <Button title="Submit" onPress={handleSubmit} />
+        <View style={styles.buttonSpacing} />
+        <Button title="Go Back" onPress={() => navigation.goBack()} />
+      </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     padding: 20,
     backgroundColor: '#f2f2f2',
+    flexGrow: 1,
   },
   logoContainer: {
-    fontSize: 20,
-    textAlign: 'center',
+    alignItems: 'center',
     marginBottom: 20,
   },
   title: {
@@ -57,7 +109,6 @@ const styles = StyleSheet.create({
   logo: { 
     width: 150, 
     height: 150, 
-    marginBottom: 200,
     borderRadius: 75,
   },
   sectionTitle: {
@@ -65,7 +116,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+  buttonContainer: {
+    marginTop: 20,
+  },
+  buttonSpacing: {
+    height: 10,
+  },
 });
-
 
 export default ContactDetailsScreen;
