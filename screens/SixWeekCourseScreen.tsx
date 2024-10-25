@@ -85,5 +85,5 @@ const styles = StyleSheet.create({
   },
   ButtonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' }
 });
-+
+
 export default SixWeekCourses;
