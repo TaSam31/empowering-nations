@@ -1,0 +1,10 @@
+pictures of the app:
+![WhatsApp Image 2024-10-31 at 19 44 26_42ea2011](https://github.com/user-attachments/assets/37fd7cf5-874a-4560-aeae-f14945310b13)
+![WhatsApp Image 2024-10-31 at 19 44 29_d0f3d4cb](https://github.com/user-attachments/assets/25f20f05-1037-4b80-aa69-b53023e3f1b5)
+![WhatsApp Image 2024-10-31 at 19 44 29_32f270a6](https://github.com/user-attachments/assets/36a5f6a7-b5d5-44e0-81de-2b37418d602f)
+![WhatsApp Image 2024-10-31 at 19 44 28_da701caa](https://github.com/user-attachments/assets/206635fb-2b0b-499f-8e76-189416816b75)
+![WhatsApp Image 2024-10-31 at 19 44 28_83919d88](https://github.com/user-attachments/assets/c648ff31-0c9f-4dd0-8158-6e0f3082aac7)
+![WhatsApp Image 2024-10-31 at 19 44 28_54338b66](https://github.com/user-attachments/assets/0745e816-5cf5-4414-8b56-83d14397fec5)
+![WhatsApp Image 2024-10-31 at 19 44 27_727aae4f](https://github.com/user-attachments/assets/2cf3fbeb-75c4-4e09-adb0-c405abde933c)
+![WhatsApp Image 2024-10-31 at 19 44 27_507f4e14](https://github.com/user-attachments/assets/4f7e884b-26b7-4d05-8cb6-6757e0ec9dbe)
+![WhatsApp Image 2024-10-31 at 19 44 27_7f4f37db](https://github.com/user-attachments/assets/79625f25-a559-4673-991a-1d2f40dfe7e3)
