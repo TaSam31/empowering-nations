@@ -1,73 +1,69 @@
 Empowering Nations
-Empowering Nations is a React Native application built with NPX and Expo, designed to provide users with information on various courses, including summaries, fees, and contact details. The app delivers a consistent, user-friendly experience on both mobile and web platforms.
+Empowering Nations is a React Native application built with NPX and Expo, designed to provide users with detailed information on various courses, including summaries, fees, and contact details. The app offers a consistent, user-friendly design for both mobile and web platforms.
 
 How to Use the App
 Home Screen
-Upon opening the app, you'll see the Home Screen with an overview of available courses.
-From here, navigate to either six-week or six-month course listings.
+Displays an overview of available courses, with navigation options to six-week or six-month course listings.
 Six-Month and Six-Week Course Screens
-Choose between six-week and six-month course options.
-Select a course to view a detailed summary, including objectives, structure, and duration.
+Allows users to choose between course durations and view summaries of each course.
 Course Details Screen
-Get comprehensive details about a specific course, including a summary and key curriculum insights.
+Provides detailed information about a specific course, including objectives, structure, and duration.
 Fee Calculation
-Use the "Calculate Fees" feature to estimate fees based on selected courses.
-This screen displays the total cost for the chosen course.
+Includes a "Calculate Fees" feature to estimate course fees.
 Contact Details Screen
-Access the Contact Screen to submit any inquiries or questions.
-You'll find placeholder contact information and a form for sending queries directly.
-Navigation
-Smoothly navigate between screens using the navigation buttons.
-All screens are accessible from the Home Screen or via back navigation, ensuring an intuitive app journey.
+Contains a contact form for inquiries, with placeholder details.
 Features
-Access a variety of courses with descriptions and details
-Calculate fees for selected courses
-Submit inquiries via the contact form
-Consistent, smooth navigation across pages
-Error handling for a seamless user experience
-
+Course listings with descriptions
+Fee calculation tool
+Contact form for inquiries
+Smooth, consistent navigation
 Technologies Used
-React Native with Expo - For building a cross-platform mobile and web application
-TypeScript - Ensures type safety and improves development experience
-React Navigation - Provides in-app navigation for smooth transitions
+React Native with Expo - Cross-platform development
+TypeScript - Type safety and improved development experience
+React Navigation - In-app navigation
 GitHub - Version control and collaboration
-Visual Studio Code - Code editing and development environment
-Canva - For creating the logo and graphic elements
-
+Visual Studio Code - Development environment
+Canva - Logo and design elements
 Setup & Installation
-Clone the repository:
-Copy code
-git clone https://github.com/TaSam31/empowering-nations.git
-Navigate to the project directory:
+Step 1: Download the Source Code
+Go to the Empowering Nations GitHub Repository.
+Click on the "Code" button, then "Download ZIP."
+Unzip the downloaded file to access the project files.
+Step 2: Set Up the Environment
+Ensure you have Node.js and Expo CLI installed.
 
-Copy code
-cd empowering-nations
-//Install dependencies:
-
-Copy code
-npm install
-//Start the Expo server:
-
-Copy code
-npx expo start
-Expo will start the development server. You can preview the app on your mobile device using the Expo Go app or run it on an emulator.
-
+Open a terminal and navigate to the project directory:
+"cd path/to/empowering-nations"
+Install the required dependencies:
+"npm install"
+Step 3: Run the App
+For Mobile (using Expo Go)
+Start the Expo server:
+"npx expo start"
+Use the QR code shown in the terminal or Expo Developer Tools to open the app in the Expo Go app on your mobile device.
+For Web
+To run the app as a web application:
+"npx expo start --web"
+This will open a new tab in your browser where you can view and interact with the web version of the app.
 Project Structure
-assets/ - Contains images and other static assets
-components/ - Reusable components across screens
-screens/ - Contains all main screens for the app
-navigation/ - Manages navigation and routing for the app
-App.tsx - Main entry point of the application
+assets/ - Images and static files
+components/ - Reusable UI components
+screens/ - Main app screens
+navigation/ - Navigation configuration
+App.tsx - Main entry point for the application
 Contributing
-If you'd like to contribute to Empowering Nations, please follow these steps:
+To contribute:
 
 Fork the repository.
-Create a new branch (git checkout -b feature-branch).
-Commit your changes (git commit -m 'Add new feature').
-Push to the branch (git push origin feature-branch).
-Open a Pull Request.
+Create a new branch:
+"git checkout -b feature-branch"
+Commit your changes:
+"git commit -m 'Add new feature'"
+Push to your branch:
+"git push origin feature-branch"
+Open a Pull Request on GitHub.
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 
 pictures of the app:
