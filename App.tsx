@@ -13,6 +13,8 @@ import LifeSkillsCourse from './screens/LifeSkillsCourse';
 import CookingCourse from './screens/CookingCourse';
 import ChildMindingCourse from './screens/ChildMindingCourse';
 import GardenMaintenanceCourse from './screens/GardenMaintenenceCourse';
+import EnrollScreen from './screens/EnrollScreen';
+import MeetTheTeamScreen from './screens/pending screens/MeetTheTeam' // Import the new screen
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +34,8 @@ export default function App() {
         <Stack.Screen name="ChildMindingCourse" component={ChildMindingCourse} />
         <Stack.Screen name="CookingCourse" component={CookingCourse} />
         <Stack.Screen name="GardenMaintenanceCourse" component={GardenMaintenanceCourse} />
+        <Stack.Screen name="EnrollScreen" component={EnrollScreen} />
+        <Stack.Screen name="MeetTheTeam" component={MeetTheTeamScreen} /> 
       </Stack.Navigator>
     </NavigationContainer>
   );

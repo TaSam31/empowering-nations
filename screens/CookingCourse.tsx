@@ -6,7 +6,8 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 type CookingCourseProps = NativeStackScreenProps<RootStackParamList, 'CookingCourse'>;
 
-const CookingCourse: React.FC<CookingCourseProps> = ({ navigation }) => {return (
+const CookingCourse: React.FC<CookingCourseProps> = ({ navigation }) => 
+  {return (
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.header}>Cooking Course</Text>
         <Text style={styles.description}>

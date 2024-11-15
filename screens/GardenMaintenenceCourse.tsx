@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Image, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import { View, Image, Text, TouchableOpacity, ScrollView, StyleSheet, Button } from 'react-native';
 import { RootStackParamList } from '../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 type GardenMaintenenceCourseProps = NativeStackScreenProps<RootStackParamList, 'GardenMaintenanceCourse'>;
 
-const GardenMaintenanceCourse: React.FC<GardenMaintenenceCourseProps> = ({ navigation }) => { return (
+const GardenMaintenanceCourse: React.FC<GardenMaintenenceCourseProps> = ({ navigation }) => 
+  { return (
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.header}>Garden Maintenance Course</Text>
         <Text style={styles.description}>
@@ -30,6 +31,10 @@ const GardenMaintenanceCourse: React.FC<GardenMaintenenceCourseProps> = ({ navig
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ContactDetailsScreen')}>
           <Text style={styles.buttonText}>Contact Us</Text>
         </TouchableOpacity>
+        {/* Enroll Now Button */}
+        <View style={styles.buttonSpacer}>
+            <Button title="Enroll Now" onPress={() => navigation.navigate('EnrollScreen')} color="#4CAF50" />
+            </View>
         <TouchableOpacity style={styles.button} onPress={() => navigation.goBack()}>
           <Text style={styles.buttonText}>Back</Text>
         </TouchableOpacity>
@@ -72,6 +77,10 @@ const GardenMaintenanceCourse: React.FC<GardenMaintenenceCourseProps> = ({ navig
         lineHeight: 24,
         color: '#333',
       },
+      buttonSpacer: {
+        marginVertical: 20,
+    },
+    
   });
   
 

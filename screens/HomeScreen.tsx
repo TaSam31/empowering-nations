@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, Image, StyleSheet } from 'react-native';
+import { View, Text, Button, Image, StyleSheet, Alert } from 'react-native';
 import { NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../types'; 
 
@@ -24,12 +24,23 @@ export default function HomeScreen({ navigation }: Props) {
                     title="Go to Six Month Courses"
                     onPress={() => navigation.navigate("Six Month Courses")}
                 />
-                <View style={styles.buttonSpacer} />
+                <View style={styles.ButtonSpacer} />
                 <Button
                     title="Six-Week Courses"
                     onPress={() => navigation.navigate('Six Week Courses')}
                 />
             </View>
+
+            {/* Enroll Now Button */}
+<View style={styles.buttonSpacer}>
+    <Button 
+        title="Enroll Now" 
+        onPress={() => Alert.alert('Enrollment Page Coming Soon!')} 
+        color="#4CAF50" 
+    />
+</View>
+            
+            
     
             </View> );}
             
@@ -64,6 +75,10 @@ const styles = StyleSheet.create({
     buttonContainer: {
         alignItems: 'center',
     },
+    ButtonSpacer: {
+        height: 10,
+    },
     buttonSpacer: {
-        height: 15, },
+        marginVertical: 20,
+    },
 });

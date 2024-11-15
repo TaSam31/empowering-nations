@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Image } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Image, Button } from 'react-native';
 import { RootStackParamList } from '../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
@@ -37,6 +37,9 @@ const LandscapingCourse: React.FC<LandscapingCourseProps> = ({ navigation }) => 
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ContactDetailsScreen')}>
           <Text style={styles.buttonText}>Contact Us</Text>
         </TouchableOpacity>
+        <View style={styles.buttonSpacer}>
+            <Button title="Enroll Now" onPress={() => navigation.navigate('EnrollScreen')} color="#4CAF50" />
+            </View>
         <TouchableOpacity style={styles.button} onPress={() => navigation.goBack()}>
           <Text style={styles.buttonText}>Back</Text>
         </TouchableOpacity>
@@ -79,6 +82,9 @@ const LandscapingCourse: React.FC<LandscapingCourseProps> = ({ navigation }) => 
         lineHeight: 24,
         color: '#333',
       },
+      buttonSpacer: {
+        marginVertical: 20,
+    },
     });
   
   export default LandscapingCourse;

@@ -1,0 +1,4 @@
+<View style={styles.buttonContainer}>
+            <Button
+            title="Meet the Team"  onPress={() => navigation.navigate('MeetTheTeam')}/>
+            </View>

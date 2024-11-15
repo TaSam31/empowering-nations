@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Image } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Image, Button } from 'react-native';
 import { RootStackParamList } from '../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
@@ -36,6 +36,9 @@ const SewingCourse: React.FC<SewingCourseProps> = ({ navigation }) => {
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ContactDetailsScreen')}>
         <Text style={styles.buttonText}>Contact Us</Text>
       </TouchableOpacity>
+      <View style={styles.buttonSpacer}>
+            <Button title="Enroll Now" onPress={() => navigation.navigate('EnrollScreen')} color="#4CAF50" />
+            </View>
       <TouchableOpacity style={styles.button} onPress={() => navigation.goBack()}>
         <Text style={styles.buttonText}>Back</Text>
       </TouchableOpacity>
@@ -73,6 +76,9 @@ const styles = StyleSheet.create({
       width: 300,
     justifyContent: 'center',
     },
+    buttonSpacer: {
+      marginVertical: 20,
+  },
     content: {
       fontSize: 16,
       lineHeight: 24,
