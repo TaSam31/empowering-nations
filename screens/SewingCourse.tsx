@@ -27,7 +27,10 @@ const SewingCourse: React.FC<SewingCourseProps> = ({ navigation }) => {
 
 </Text>
 
-      <TouchableOpacity style={styles.button} onPress={() => alert('Fees Calculation Coming Soon!')}>
+      <TouchableOpacity style={styles.button} onPress={() => { 
+        alert('Fees Calculation Coming Soon!'); 
+        navigation.navigate('TotalFeesScreen');
+      }}>
         <Text style={styles.buttonText}>Calculate Fees</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ContactDetailsScreen')}>

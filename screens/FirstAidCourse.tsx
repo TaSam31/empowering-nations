@@ -23,7 +23,10 @@ const FirstAidCourse: React.FC<FirstAidCourseProps> = ({ navigation }) => {retur
   {"\n"}• Respiratory distress e.g., Choking, blocked airway
 </Text>
 
-      <TouchableOpacity style={styles.button} onPress={() => alert('Fees Calculation Coming Soon!')}>
+      <TouchableOpacity style={styles.button} onPress={() =>  { 
+        alert('Fees Calculation Coming Soon!'); 
+        navigation.navigate('TotalFeesScreen');
+      }}>
         <Text style={styles.buttonText}>Calculate Fees</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ContactDetailsScreen')}>

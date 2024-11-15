@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Image } from 'react-native';
 import { RootStackParamList } from '../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { ParamListBase } from '@react-navigation/native';
 
 // Define the props type for this screen using NativeStackScreenProps
-type SixWeekCoursesProps = NativeStackScreenProps<RootStackParamList, 'Six Week Courses'>;
+type SixWeekCoursesProps = NativeStackScreenProps<ParamListBase, 'Six Week Courses'>;
 
-const SixWeekCourses: React.FC<SixWeekCoursesProps> = ({ navigation }) => {
+const SixWeekCourses: FC<SixWeekCoursesProps> = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.header}>Six-Week Courses</Text>

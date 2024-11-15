@@ -4,12 +4,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import SixMonthCourseScreen from './screens/SixMonthCourseScreen';
 import SixWeekCourseScreen from './screens/SixWeekCourseScreen';
-import CourseDetailsScreen from './screens/CourseDetailsScreen';
 import TotalFeesScreen from './screens/TotalFeesScreen';
 import ContactDetailsScreen from './screens/ContactDetailsScreen';
-import FirstAidCourse from './screens/FirstAidCourse'; // Add your import path
-import SewingCourse from './screens/SewingCourse'; // Add your import path
-import LandscapingCourse from './screens/LandscapingCourse'; // Add your import path
+import FirstAidCourse from './screens/FirstAidCourse'; 
+import SewingCourse from './screens/SewingCourse'; 
+import LandscapingCourse from './screens/LandscapingCourse'; 
 import LifeSkillsCourse from './screens/LifeSkillsCourse';
 import CookingCourse from './screens/CookingCourse';
 import ChildMindingCourse from './screens/ChildMindingCourse';
@@ -24,7 +23,6 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Six Month Courses" component={SixMonthCourseScreen} />
         <Stack.Screen name="Six Week Courses" component={SixWeekCourseScreen} />
-        <Stack.Screen name="CourseDetails" component={CourseDetailsScreen} />
         <Stack.Screen name="TotalFeesScreen" component={TotalFeesScreen} />
         <Stack.Screen name="ContactDetailsScreen" component={ContactDetailsScreen} />
         <Stack.Screen name="FirstAidCourse" component={FirstAidCourse} />

@@ -12,6 +12,5 @@ export type RootStackParamList = {
     SewingCourse: undefined;
     ContactDetailsScreen: undefined;
     AboutUsScreen: undefined;
-    ErrorHandlingScreen: undefined;
     TotalFeesScreen: undefined; 
 };

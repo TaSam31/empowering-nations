@@ -23,7 +23,10 @@ const CookingCourse: React.FC<CookingCourseProps> = ({ navigation }) => {return 
   {"\n"}• Preparation and cooking of meals
 
 </Text>
-        <TouchableOpacity style={styles.button} onPress={() => alert('Fees Calculation Coming Soon!')}>
+        <TouchableOpacity style={styles.button} onPress={() =>  { 
+        alert('Fees Calculation Coming Soon!'); 
+        navigation.navigate('TotalFeesScreen');
+      }}>
           <Text style={styles.buttonText}>Calculate Fees</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ContactDetailsScreen')}>

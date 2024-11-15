@@ -15,7 +15,10 @@ const ChildMindingCourse: React.FC<ChildMindingCourseProps> = ({ navigation }) =
         <View style={styles.imagePlaceholder}>
         <Image source={ require( '../_images/childminding.png' )} style={styles.courseImg}/>
         </View>
-        <TouchableOpacity style={styles.button} onPress={() => alert('Fees Calculation Coming Soon!')}>
+        <TouchableOpacity style={styles.button} onPress={() =>  { 
+        alert('Fees Calculation Coming Soon!'); 
+        navigation.navigate('TotalFeesScreen');
+      }}>
           <Text style={styles.buttonText}>Calculate Fees</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ContactDetailsScreen')}>
