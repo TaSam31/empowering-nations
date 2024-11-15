@@ -1,7 +1,13 @@
+
 Empowering Nations
+
+
 Empowering Nations is a React Native application built with NPX and Expo, designed to provide users with detailed information on various courses, including summaries, fees, and contact details. The app offers a consistent, user-friendly design for both mobile and web platforms.
 
+
 How to Use the App
+
+
 Home Screen
 Displays an overview of available courses, with navigation options to six-week or six-month course listings.
 Six-Month and Six-Week Course Screens
@@ -12,7 +18,11 @@ Fee Calculation
 Includes a "Calculate Fees" feature to estimate course fees.
 Contact Details Screen
 Contains a contact form for inquiries, with placeholder details.
+
+
 Features
+
+
 Course listings with descriptions
 Fee calculation tool
 Contact form for inquiries
@@ -24,18 +34,23 @@ React Navigation - In-app navigation
 GitHub - Version control and collaboration
 Visual Studio Code - Development environment
 Canva - Logo and design elements
+
+
 Setup & Installation
+
+
 Step 1: Download the Source Code
 Go to the Empowering Nations GitHub Repository.
 Click on the "Code" button, then "Download ZIP."
 Unzip the downloaded file to access the project files.
+
 Step 2: Set Up the Environment
 Ensure you have Node.js and Expo CLI installed.
-
 Open a terminal and navigate to the project directory:
 "cd path/to/empowering-nations"
 Install the required dependencies:
 "npm install"
+
 Step 3: Run the App
 For Mobile (using Expo Go)
 Start the Expo server:
@@ -45,15 +60,22 @@ For Web
 To run the app as a web application:
 "npx expo start --web"
 This will open a new tab in your browser where you can view and interact with the web version of the app.
+
+
 Project Structure
+
+
 assets/ - Images and static files
 components/ - Reusable UI components
 screens/ - Main app screens
 navigation/ - Navigation configuration
 App.tsx - Main entry point for the application
-Contributing
-To contribute:
 
+
+Contributing
+
+
+To contribute:
 Fork the repository.
 Create a new branch:
 "git checkout -b feature-branch"
@@ -62,7 +84,11 @@ Commit your changes:
 Push to your branch:
 "git push origin feature-branch"
 Open a Pull Request on GitHub.
+
+
 License
+
+
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 
